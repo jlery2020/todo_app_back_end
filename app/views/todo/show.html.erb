@@ -1,21 +1,14 @@
-<html>
-  <head>
-    <title>Todo List Application</title>
-    <link rel="stylesheet" href="show.css" type="text/css" />
-  </head>
-  <body>
-    <h1>
-      <img class="company-logo" src="https://public.3.basecamp.com/p/iahgNshn1oKq98sWGf1q89Vo/uploads/511042491/download/CodeNow%20Logo.png"></img>
-      Workshop Todo List
-    </h1>
 
-    <div>
-      <input type="checkbox">
-      <h2>Make the curriculum</h2>
-      <span>4 Pomodoros</span>
-      <a href="#" id="edit-todo-button">Edit</a>
-      <a href="#" id="delete-todo-button">Delete</a>
-      <a href="index.html" class="simple-link">Go back...</a>
-    </div>
-  </body>
-</html>
+<h1>
+  <img class="company-logo" src="https://public.3.basecamp.com/p/iahgNshn1oKq98sWGf1q89Vo/uploads/511042491/download/CodeNow%20Logo.png"></img>
+  Workshop Todo List
+</h1>
+<h3>Todo #<%= params[:id] %></h3>
+<div class="card">
+  <input type="checkbox" name=""/>
+  <h2>Make the curriculum</h2>
+  <span class="pomodoro-estimate large-pomodoro-estimate"><%= 3+1 %> Pomodoros</span>
+ <h2><%= @todo_description %></h2>
+<span class="pomodoro-estimate large-pomodoro-estimate"><%= @todo_pomodoro_estimate %> Pomodoros</span>
+  <a href="/todo/index" class="simple-link">Go back...</a>
+</div>
