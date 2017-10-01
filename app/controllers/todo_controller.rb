@@ -1,13 +1,12 @@
 class TodoController < ApplicationController
     def index
+      @todos=Todo.all
     end
     def show
          @todo = Todo.find_by_id(params[:id])       
          # The ... signifies that there is more code in this section, but is not shown in the example for the sake of brevity
        
     end
-        
-end
 
 def new
 end
@@ -32,4 +31,5 @@ def destroy
   t = Todo.find_by_id(params[:id])
   t.destroy
   redirect_to "/todo/index"
+end
 end
